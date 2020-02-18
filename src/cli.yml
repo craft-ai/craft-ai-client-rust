@@ -1,0 +1,36 @@
+name: craft ai CLI
+about: craft ai command line interface
+settings:
+  - SubcommandRequired
+args:
+  - token:
+      help: craft ai token to be used (defaults to the `CRAFT_TOKEN` environment variable)
+      short: t
+      value_name: TOKEN
+      takes_value: true
+subcommands:
+  - ping:
+      about: ping craft ai platform
+  - agents:
+      about: agents management
+      settings:
+        - SubcommandRequired
+      subcommands:
+        - create:
+            about: create an agent
+            args:
+              - NAME:
+                  index: 1
+                  value_name: NAME
+                  help: The agent name
+                  required: true
+                  takes_value: true
+        - delete:
+            about: delete an agent
+            args:
+              - NAME:
+                  index: 1
+                  value_name: NAME
+                  help: The agent name
+                  required: true
+                  takes_value: true
