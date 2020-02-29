@@ -11,5 +11,7 @@ pub struct ApiInfo {
 }
 
 pub async fn ping(client: &Client) -> Result<ApiInfo, Error> {
-  client.request::<ApiInfo>(Method::GET, "/").await
+  client
+    .request_path::<&str, (), ApiInfo>(Method::GET, "/api/v1", None)
+    .await
 }

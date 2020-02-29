@@ -19,10 +19,15 @@ subcommands:
         - create:
             about: create an agent
             args:
-              - NAME:
-                  index: 1
-                  value_name: NAME
+              - name:
                   help: The agent name
+                  short: n
+                  value_name: AGENT_NAME
+                  takes_value: true
+              - AGENT_CONFIGURATION_FILE:
+                  index: 1
+                  value_name: AGENT_CONFIGURATION_FILE
+                  help: The path to an agent configuration serialized in a .json file
                   required: true
                   takes_value: true
         - delete:
