@@ -1,4 +1,4 @@
-use crate::client::Client;
+use crate::client::{Client, Method};
 use crate::error::Error;
 
 use serde::Deserialize;
@@ -11,5 +11,5 @@ pub struct ApiInfo {
 }
 
 pub async fn ping(client: &Client) -> Result<ApiInfo, Error> {
-  client.request::<ApiInfo>("/").await
+  client.request::<ApiInfo>(Method::GET, "/").await
 }
