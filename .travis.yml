@@ -5,8 +5,9 @@ rust:
   - nightly
 cache: cargo
 script:
-  - cargo build --verbose --all
-  - cargo test --verbose --all
+  - cargo build --all
+  - cargo fmt -- --check
+  - cargo test --all
 env:
   global:
     secure: ag6rgNVwJG061QCsReTDQWH9lvjjlKsr9sGK0wotghIKplw0AOAtmZz3/bjSQUbew66sbri76jk8zv21oNljRiNf7tvLHzyPz3Yfkdbwo2mJNXSFk77GY5HyawvhUp0oV5Fo1FIW8sh3qsVJUgR06KZJm1jpuymadhlHInePAnGju+3cLE5XU34mtsQl3Ld1Opsk7/svi14vCcy4J1Uql3pojwrvMtbhGGnj6Lg4cvFVNp6j5TMp3L6uZxqiH8A2fBQwOf74nECMMZS09SfflhtjXdTzPy5jpdtbvxyoGHUWMS37AaYcyWoZwZfcNIMvGJ696DqN6DUEkpzQtMg5iHMDxH86PmO+zcOuXqOE/Ll5n7OMGdDRlkDbGCrhR892sCAPArJOEV8qciJNegAHCoyRF06EoTyOfdY2X1LKuEre847xo8NSHFtiC5AEItJT4tNu+F21EjIrXfcZ2vFjWLTmM9Q6LdXOYJjqu1FUXK6lp/GnI2dOxirx3SpwRmI6z+bo6ApfWzgV4t7LQiWAAR5xP+RVBU3+6GwvBmMcOmAGvYLBq3xB08grujMEjbYjlXnFZCulY5kYE+pZCA2qVZzavjucNdX5mYVuXdGYdeyNgPr+xHPrdngTdGtVk6UMFWNW+rv/4eR/JeesvW8NM1vXnoAWWi6pCr841xFzGGM=
